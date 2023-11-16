@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Meta Manager", menuName = "ScriptableObjects/Meta Manager", order = 1)]
 public class ManagerMeta : ScriptableObject
 {
-    [SerializeField] private int CoinsObjective;
+    [SerializeField] public int CoinsObjective;
 
     public bool CheckWin(int currentCoins)
     {

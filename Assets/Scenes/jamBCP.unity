@@ -420,7 +420,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &115528504
 GameObject:
@@ -892,6 +892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 270039376}
   - component: {fileID: 270039375}
+  - component: {fileID: 270039377}
   m_Layer: 0
   m_Name: ManagerScene
   m_TagString: Untagged
@@ -929,6 +930,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &270039377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270039374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d37dbe170d9ca4789b94a0c9966c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  managerMeta: {fileID: 0}
+  txtMonedas: {fileID: 2120480681}
+  monedas: {fileID: 11400000, guid: aba9c957216bec34aabb2a0303b8e404, type: 2}
 --- !u!1 &282611472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,7 +1768,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 47
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &545292587
 PrefabInstance:
@@ -2182,7 +2198,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2694498918705891976, guid: 1979dfc33c58eeb4ab9e0219dd014a68, type: 3}
       propertyPath: m_RootOrder
-      value: 46
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 2694498918705891976, guid: 1979dfc33c58eeb4ab9e0219dd014a68, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2440,7 +2456,7 @@ Transform:
   m_Children:
   - {fileID: 1276513492}
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &720984652
 MonoBehaviour:
@@ -2454,12 +2470,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4c9178ca9758c4a9b50c1e1608a0b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 270039377}
   pause: {fileID: 270039375}
   modificarPowers: {fileID: 720984647}
+  monedas: {fileID: 11400000, guid: aba9c957216bec34aabb2a0303b8e404, type: 2}
   precio: 1
   monedasRequeridas: 12
-  monedas: 0
-  txtMonedas: {fileID: 2120480681}
   enemys:
   - {fileID: 2907312140918480294, guid: 8d5b7489600489e42a530a81fc190195, type: 3}
   - {fileID: 8319940100998183793, guid: 910f59034876d1b4fba354301b9ab7e1, type: 3}
@@ -2475,7 +2491,7 @@ MonoBehaviour:
   lose: {fileID: 1235850963}
 --- !u!95 &720984653
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2492,7 +2508,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!82 &720984654
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3618,7 +3635,7 @@ Transform:
   - {fileID: 2088552141}
   - {fileID: 1001904882}
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &946217171
 GameObject:
@@ -4253,6 +4270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -4288,7 +4306,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1193246734
 GameObject:
@@ -4832,7 +4850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 657212127090896108, guid: a5c86a8609538b246bb64c6c98693de0, type: 3}
       propertyPath: m_RootOrder
-      value: 43
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 657212127090896108, guid: a5c86a8609538b246bb64c6c98693de0, type: 3}
       propertyPath: m_LocalScale.x
@@ -6458,7 +6476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 657212127090896108, guid: a5c86a8609538b246bb64c6c98693de0, type: 3}
       propertyPath: m_RootOrder
-      value: 40
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 657212127090896108, guid: a5c86a8609538b246bb64c6c98693de0, type: 3}
       propertyPath: m_LocalScale.x
@@ -6750,7 +6768,7 @@ RectTransform:
   - {fileID: 1036099681}
   - {fileID: 946217172}
   m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6854,7 +6872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 657212127090896108, guid: a5c86a8609538b246bb64c6c98693de0, type: 3}
       propertyPath: m_RootOrder
-      value: 42
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 657212127090896108, guid: a5c86a8609538b246bb64c6c98693de0, type: 3}
       propertyPath: m_LocalScale.x
@@ -7034,7 +7052,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1923881797
