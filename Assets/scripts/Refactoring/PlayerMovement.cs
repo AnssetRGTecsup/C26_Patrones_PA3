@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioClip coinSfx;
     [SerializeField] private AudioClip dashSfx;
     [SerializeField] private AudioSource sfxPlayer;
+    [SerializeField] private GameManager GM;
 
     private float _horizontalMovement;
     private bool _isGrounded = true;
@@ -59,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
         _horizontalMovement = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(_horizontalMovement, rb.velocity.y);
 
-        spriteRenderer.flipX = rb.velocity.x > 0;
+        spriteRenderer.flipX = rb.velocity.x < 0;
 
         animator.SetBool("Run", rb.velocity.magnitude > 0);
 
@@ -91,5 +92,11 @@ public class PlayerMovement : MonoBehaviour
             coins.AddCoins(+1);
             sfxPlayer.PlayOneShot(coinSfx);
         }
+        if (collision.CompareTag("Finish"))
+        {
+            Debug.Log("Finish");
+            GM.checkWin();
+        }
     }
+    
 }

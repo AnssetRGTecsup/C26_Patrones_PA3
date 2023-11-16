@@ -6,7 +6,7 @@ using System;
 [CreateAssetMenu(fileName = "Coin Manager", menuName = "ScriptableObjects/Coin Manager", order =0)]
 public class ManagerCoins : ScriptableObject
 {
-    private int _currentCoins;
+    [SerializeField] private int _currentCoins;
 
     public int CurrentCoints => _currentCoins;
 
