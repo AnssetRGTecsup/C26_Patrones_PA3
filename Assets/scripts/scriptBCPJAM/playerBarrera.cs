@@ -6,13 +6,13 @@ using TMPro;
 using UnityEngine.UI;
 public class playerBarrera : MonoBehaviour
 {
+    public UIController controller;
     public ManagerScene pause;
     public MovimientoPlayer modificarPowers;
+    public ManagerCoins monedas;
     public int precio;
     public int monedasRequeridas;
-    public int monedas;
 
-    public TextMeshProUGUI txtMonedas;
     public GameObject[] enemys=new GameObject[3];
 
     //sonidos
@@ -31,23 +31,28 @@ public class playerBarrera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        monedas = 0;
+
+        monedas._currentCoins = 0;
         //txtMonedas.text = "Monedas: "+monedas;
-        txtMonedas.text =  monedas.ToString() ;
+        controller.ActualizarUI();
     }
 
     // Update is called once per frame
     void Update()
     {
-        txtMonedas.text = monedas.ToString();
+        controller.txtMonedas.text = monedas._currentCoins.ToString();
         if (Input.GetKeyDown("p"))
         {
-            if (monedas >= precio)
+            Debug.Log("Entra");
+            if(controller.VerificarDash())
+
             {
                 PoderDash();
             }
         }
+
+        controller.ActualizarUI();
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -95,63 +100,57 @@ public class playerBarrera : MonoBehaviour
 
     void winComporobar()
     {
-        if (monedas >= monedasRequeridas)
+        if (controller.VerificarManagerMeta())
         {
             win.SetActive(true);
-            
-        }
-        else
+        }else
         {
             lose.SetActive(true);
-            
         }
     }
     void sumarMoneda()
     {
-        monedas++;
-        txtMonedas.text = monedas.ToString();
+        monedas._currentCoins++;
+       
     }
     void restarMoneda()
     {
-        if (monedas != 0)
+        if (monedas._currentCoins != 0)
         {
-            monedas = monedas - 1;
-            txtMonedas.text = monedas.ToString();
+            monedas._currentCoins = monedas._currentCoins - 1;
         }
 
     }
     void inversion()
     {
-        if (monedas <= 0)
+        if (monedas._currentCoins <= 0)
         {
             
         }
-        if (monedas % 2 == 0)
+        if (monedas._currentCoins % 2 == 0)
         {
             int n = Random.Range(0, 100);
             if (n < 30)
             {
-                monedas = monedas + (monedas / 2);
+                monedas._currentCoins = monedas._currentCoins + (monedas._currentCoins / 2);
             }
             else if (n >= 30)
             {
-                monedas = monedas - (monedas / 2);
+                monedas._currentCoins = monedas._currentCoins - (monedas._currentCoins / 2);
             }
-            txtMonedas.text = monedas.ToString();
             print(n);
         }
-        if (monedas % 2 != 0)
+        if (monedas._currentCoins % 2 != 0)
         {
             int n = Random.Range(0, 100);
             if (n < 30)
             {
-                monedas = monedas + ((monedas + 1)/ 2);
+                monedas._currentCoins = monedas._currentCoins + ((monedas._currentCoins + 1)/ 2);
             }
             else if (n >= 30)
             {
-                monedas = monedas - ((monedas + 1)/ 2);
+                monedas._currentCoins = monedas._currentCoins - ((monedas._currentCoins + 1)/ 2);
             }
-            txtMonedas.text = monedas.ToString();
             print(n);
         }
     }
@@ -176,8 +175,8 @@ public class playerBarrera : MonoBehaviour
     {
         audioSource.clip = dash;
         audioSource.Play();
-        monedas=monedas-precio;
+        monedas._currentCoins = monedas._currentCoins - precio;
         transform.position = new Vector2(transform.position.x + 10, transform.position.y);
-        txtMonedas.text = monedas.ToString();
+        controller.txtMonedas.text = monedas.ToString();
     }
 }
