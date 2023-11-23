@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2907312140918480293}
   - component: {fileID: 2907312140918480289}
   - component: {fileID: 2907312140918480290}
-  - component: {fileID: 2907312140918480291}
+  - component: {fileID: -2776633342369133403}
   m_Layer: 0
   m_Name: GatoVendedor (1)
   m_TagString: rata
@@ -103,7 +103,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 0c931523c62d3744ca30b760067d81b1, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -117,7 +117,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2907312140918480294}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0c931523c62d3744ca30b760067d81b1, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -134,7 +134,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.0210543, y: 13.830935}
   m_EdgeRadius: 0
---- !u!114 &2907312140918480291
+--- !u!114 &-2776633342369133403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,8 +143,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2907312140918480294}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a1d7d8b7d2aaa14cad385ca9158546d, type: 3}
+  m_Script: {fileID: 11500000, guid: be6f4a81009ca314d9ed79e5b58e8be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  managerCoins: {fileID: 11400000, guid: 219c6e33886b6b7408a10c8e7aeee674, type: 2}
+  amount: 1
   speed: 3
-  direccion: 0

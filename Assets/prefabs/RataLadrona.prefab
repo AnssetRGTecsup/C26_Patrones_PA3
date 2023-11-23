@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8319940100998183794}
   - component: {fileID: 8319940100998183795}
   - component: {fileID: 8319940100998183792}
-  - component: {fileID: 8319940100998183796}
+  - component: {fileID: 7654308532575701051}
   m_Layer: 0
   m_Name: RataLadrona
   m_TagString: rata
@@ -134,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8319940100998183796
+--- !u!114 &7654308532575701051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,8 +143,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8319940100998183793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a1d7d8b7d2aaa14cad385ca9158546d, type: 3}
+  m_Script: {fileID: 11500000, guid: be6f4a81009ca314d9ed79e5b58e8be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  managerCoins: {fileID: 11400000, guid: 219c6e33886b6b7408a10c8e7aeee674, type: 2}
+  amount: 2
   speed: -3.5
-  direccion: 0

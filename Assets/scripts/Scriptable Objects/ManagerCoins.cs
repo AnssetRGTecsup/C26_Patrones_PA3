@@ -19,7 +19,7 @@ public class ManagerCoins : ScriptableObject
 
     public bool PayCoins(int amount)
     {
-        if (_currentCoins < amount) return false;
+        if (_currentCoins <= amount) return false;
 
         _currentCoins -= amount;
 
